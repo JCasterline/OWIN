@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinTokenAuthenticationClie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinClaimAuthorization", "OwinClaimAuthorization\OwinClaimAuthorization.csproj", "{DEA0135E-E5B3-46E8-A466-72F20DD728EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinIdentityAuthentication", "OwinIdentityAuthentication\OwinIdentityAuthentication.csproj", "{576724D3-2B9E-4EA2-857D-75EB9F24F133}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{DEA0135E-E5B3-46E8-A466-72F20DD728EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEA0135E-E5B3-46E8-A466-72F20DD728EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEA0135E-E5B3-46E8-A466-72F20DD728EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576724D3-2B9E-4EA2-857D-75EB9F24F133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576724D3-2B9E-4EA2-857D-75EB9F24F133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576724D3-2B9E-4EA2-857D-75EB9F24F133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576724D3-2B9E-4EA2-857D-75EB9F24F133}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
