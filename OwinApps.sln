@@ -3,33 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinWebApp", "OwinWebApp\OwinWebApp.csproj", "{28C7EE5A-55D1-456A-BE80-FB43DD4E5069}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01OwinWebApp", "OwinWebApp\01OwinWebApp.csproj", "{28C7EE5A-55D1-456A-BE80-FB43DD4E5069}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinConsoleApp", "OwinConsoleApp\OwinConsoleApp.csproj", "{3EB4466F-CC60-4981-82C0-FF5B7AF95792}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03OwinConsoleApp", "OwinConsoleApp\03OwinConsoleApp.csproj", "{3EB4466F-CC60-4981-82C0-FF5B7AF95792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinStartupClassDetection", "OwinStartupClassDetection\OwinStartupClassDetection.csproj", "{A43BDC66-2260-4A52-B0C5-77C5EFA3ACF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02OwinStartupClassDetection", "OwinStartupClassDetection\02OwinStartupClassDetection.csproj", "{A43BDC66-2260-4A52-B0C5-77C5EFA3ACF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinSelfHostedWebAPI", "OwinSelfHostedWebAPI\OwinSelfHostedWebAPI.csproj", "{D18B51DF-4CF6-462B-9D15-44C2F141D643}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06OwinSelfHostedWebAPI", "OwinSelfHostedWebAPI\06OwinSelfHostedWebAPI.csproj", "{D18B51DF-4CF6-462B-9D15-44C2F141D643}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinSelfHostedSignalR", "OwinSelfHostedSignalR\OwinSelfHostedSignalR.csproj", "{3718B728-D3E1-4987-BFD6-27944F5E79B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07OwinSelfHostedSignalR", "OwinSelfHostedSignalR\07OwinSelfHostedSignalR.csproj", "{3718B728-D3E1-4987-BFD6-27944F5E79B7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRClient", "SignalRClient\SignalRClient.csproj", "{08DE4F41-8E6C-46BF-8E28-7EF889D0E113}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinWindowsService", "OwinWindowsService\OwinWindowsService.csproj", "{9C9E6354-035F-4309-B9AD-9FA0F0199E3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04OwinWindowsService", "OwinWindowsService\04OwinWindowsService.csproj", "{9C9E6354-035F-4309-B9AD-9FA0F0199E3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinFileServer", "OwinStaticFiles\OwinFileServer.csproj", "{D695FE7D-9400-4EEC-A577-E8800FB86B94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05OwinFileServer", "OwinStaticFiles\05OwinFileServer.csproj", "{D695FE7D-9400-4EEC-A577-E8800FB86B94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinFileServerWebApi", "OwinFileServerWebApi\OwinFileServerWebApi.csproj", "{7A089175-DE90-4E81-9ADE-048688D02472}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08OwinFileServerWebApi", "OwinFileServerWebApi\08OwinFileServerWebApi.csproj", "{7A089175-DE90-4E81-9ADE-048688D02472}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinTokenAuthentication", "OwinTokenAuthentication\OwinTokenAuthentication.csproj", "{01CFE9A2-C966-4CAB-8367-450237DBE309}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09OwinTokenAuthentication", "OwinTokenAuthentication\09OwinTokenAuthentication.csproj", "{01CFE9A2-C966-4CAB-8367-450237DBE309}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Clients", "Test Clients", "{2D25FCB2-EE73-48C6-86DD-429A4C24F226}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinTokenAuthenticationClient", "OwinTokenAuthenticationClient\OwinTokenAuthenticationClient.csproj", "{26F62A6A-D127-41E0-831C-92D52DFDC1E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinClaimAuthorization", "OwinClaimAuthorization\OwinClaimAuthorization.csproj", "{DEA0135E-E5B3-46E8-A466-72F20DD728EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10OwinClaimAuthorization", "OwinClaimAuthorization\10OwinClaimAuthorization.csproj", "{DEA0135E-E5B3-46E8-A466-72F20DD728EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinIdentityAuthentication", "OwinIdentityAuthentication\OwinIdentityAuthentication.csproj", "{576724D3-2B9E-4EA2-857D-75EB9F24F133}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11OwinIdentityAuthentication", "OwinIdentityAuthentication\11OwinIdentityAuthentication.csproj", "{576724D3-2B9E-4EA2-857D-75EB9F24F133}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
