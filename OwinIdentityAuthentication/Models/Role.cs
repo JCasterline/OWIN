@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using System.Collections.Generic;
+using System.Security.Claims;
+using Microsoft.AspNet.Identity;
 
 namespace OwinIdentityAuthentication.Models
 {
@@ -6,5 +8,6 @@ namespace OwinIdentityAuthentication.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public List<Claim> Claims { get; set; } 
     }
 }
