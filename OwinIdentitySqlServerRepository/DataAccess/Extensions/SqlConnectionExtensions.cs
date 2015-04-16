@@ -16,6 +16,8 @@ namespace OwinIdentitySqlServerRepository.DataAccess.Extensions
         {
             try
             {
+                connection.Open();
+
                 using (var transaction = connection.BeginTransaction())
                 {
                     try
@@ -27,8 +29,6 @@ namespace OwinIdentitySqlServerRepository.DataAccess.Extensions
 
                             foreach (var parameter in parameters)
                                 command.Parameters.Add(parameter);
-
-                            connection.Open();
 
                             command.ExecuteNonQuery();
 
