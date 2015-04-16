@@ -1,10 +1,12 @@
-﻿using RepositoryPattern;
+﻿using Microsoft.AspNet.Identity;
+using RepositoryPattern;
 
 namespace OwinIdentitySqlServerRepository.DataAccess.Models
 {
-    public class UserClaim : IEntity<int>
+    public class Role : IRole<int>, IEntity<int>
     {
-        private const string _tableName = "UserClaims";
+        private const string _tableName = "Roles";
+
         public string Destination
         {
             get { return _tableName; }
@@ -16,7 +18,6 @@ namespace OwinIdentitySqlServerRepository.DataAccess.Models
         }
 
         public int Id { get; set; }
-        public int UserId { get; set; }
-        public int ClaimId { get; set; }
+        public string Name { get; set; }
     }
 }

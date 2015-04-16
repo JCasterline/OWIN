@@ -2,9 +2,9 @@
 
 namespace OwinIdentitySqlServerRepository.DataAccess.Models
 {
-    public class UserClaim : IEntity<int>
+    public class UserRole : IEntity<int>
     {
-        private const string _tableName = "UserClaims";
+        private const string _tableName = "UserRoles";
         public string Destination
         {
             get { return _tableName; }
@@ -17,6 +17,6 @@ namespace OwinIdentitySqlServerRepository.DataAccess.Models
 
         public int Id { get; set; }
         public int UserId { get; set; }
-        public int ClaimId { get; set; }
+        public int RoleId { get; set; }
     }
 }

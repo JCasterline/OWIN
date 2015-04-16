@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
@@ -33,23 +31,29 @@ namespace OwinIdentitySqlServerRepository.Identity
 
         public Task AddClaimAsync(User user, Claim claim)
         {
-            var userClaim = new {UserId = user.Id, ClaimType = claim.Type, ClaimValue = claim.Value};
-            return Task.Run(() => { Connection.Insert(userClaim, new UserClaim().Destination); });
+            return Task.Run(() => { Connection.ExecuteNonQuery(Statements.AddUserClaim, user.Id.AsParameter("@userid"), claim.Type.AsParameter("@type"), claim.Value.AsParameter("@value")); });
         }
 
         public Task<IList<Claim>> GetClaimsAsync(User user)
         {
             return Task.Run(() =>
             {
-                var results = Connection.Select<UserClaim>(new {UserId = user.Id}, new UserClaim().Destination);
-                return (IList<Claim>)results.Select(x => new Claim(x.ClaimType, x.ClaimValue)).ToList();
+                var results =
+                    Connection.ExecuteQuery<DataAccess.Models.Claim>(
+                        Statements.GetUserClaims,
+                        user.Id.AsParameter("@userid"));
+
+                return (IList<Claim>)results.Select(x => new Claim(x.Type, x.Value)).ToList();
             });
         }
 
         public Task RemoveClaimAsync(User user, Claim claim)
         {
-            var userClaim = new {UserId = user.Id, ClaimType = claim.Type, ClaimValue = claim.Value};
-            return Task.Run(()=>Connection.Delete(userClaim, new UserClaim().Destination));
+            return
+                Task.Run(
+                    () =>
+                        Connection.ExecuteNonQuery(Statements.RemoveUserClaim, user.Id.AsParameter("@userid"),
+                            claim.Type.AsParameter("@type"), claim.Value.AsParameter("@value")));
         }
 
         public Task<User> FindByEmailAsync(string email)
@@ -147,7 +151,7 @@ namespace OwinIdentitySqlServerRepository.Identity
 
         public Task CreateAsync(User user)
         {
-            return Task.Run(() => Connection.Insert(user, user.Destination));
+            return Task.Run(() => Connection.Insert(new {user.UserName, user.Name, user.PasswordHash, user.SecurityStamp, user.Email, user.PhoneNumber, user.TwoFactorEnabled}, user.Destination));
         }
 
         public Task DeleteAsync(User user)
@@ -167,7 +171,7 @@ namespace OwinIdentitySqlServerRepository.Identity
 
         public Task UpdateAsync(User user)
         {
-            return Task.Run(() => Connection.Insert(user, user.Destination));
+            return Task.Run(() => Connection.Update(user, user.Destination));
         }
 
         public void Dispose()

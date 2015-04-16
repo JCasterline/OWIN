@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using OwinIdentitySqlServerRepository.Extensions;
 using OwinIdentitySqlServerRepository.ResourceAuthorization;
 
 namespace OwinIdentitySqlServerRepository.Controllers
@@ -22,7 +19,6 @@ namespace OwinIdentitySqlServerRepository.Controllers
         }
 
         // GET api/values/5 
-        [Authorize(Roles="Admin")]
         public async Task<string> Get(int id)
         {
             return await Task.FromResult("value"+id);

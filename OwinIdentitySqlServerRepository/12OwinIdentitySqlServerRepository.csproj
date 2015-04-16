@@ -113,7 +113,12 @@
     <Compile Include="Authorization\AuthorizationManager.cs" />
     <Compile Include="CustomOwinLogger.cs" />
     <Compile Include="CustomOwinLoggerFactory.cs" />
+    <Compile Include="DataAccess\Models\Role.cs" />
+    <Compile Include="DataAccess\Models\RoleClaim.cs" />
+    <Compile Include="DataAccess\Models\UserRoles.cs" />
     <Compile Include="DataAccess\Statements.cs" />
+    <Compile Include="Identity\ApplicationRoleManager.cs" />
+    <Compile Include="Identity\AppRoleStore.cs" />
     <Compile Include="WebApiController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="DataAccess\Models\Claim.cs" />

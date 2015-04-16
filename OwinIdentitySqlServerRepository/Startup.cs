@@ -41,9 +41,9 @@ namespace OwinIdentitySqlServerRepository
                 (options, context) =>
                     ApplicationUserManager.Create(options, new AppUserStore(new SqlServerDatabase().CreateConnection())));
 
-            //app.CreatePerOwinContext<ApplicationRoleManager>(
-            //    (options, context) =>
-            //        ApplicationRoleManager.Create(options, new AppRoleStore()));
+            app.CreatePerOwinContext<ApplicationRoleManager>(
+                (options, context) =>
+                    ApplicationRoleManager.Create(new AppRoleStore(new SqlServerDatabase().CreateConnection())));
 
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
