@@ -38,6 +38,7 @@ namespace OwinIdentitySqlServerRepository.DataAccess.Extensions
                     catch (Exception)
                     {
                         transaction.Rollback();
+                        throw;
                     }
                 }
             }

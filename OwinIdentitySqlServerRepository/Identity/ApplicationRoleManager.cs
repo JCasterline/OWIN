@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
+﻿using Microsoft.AspNet.Identity;
 using OwinIdentitySqlServerRepository.DataAccess.Models;
 
 namespace OwinIdentitySqlServerRepository.Identity
